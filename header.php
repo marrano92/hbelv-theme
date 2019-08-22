@@ -62,6 +62,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<li><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16030"><span>Back to the Codrops Article</span></a></li>
 		</ul>
 	</div>
+	<?php
+//	wp_nav_menu(
+//		array(
+//			'theme_location'  => 'primary',
+//			'container_class' => 'collapse navbar-collapse',
+//			'container_id'    => 'navbarNavDropdown',
+//			'menu_class'      => 'navbar-nav ml-auto',
+//			'fallback_cb'     => '',
+//			'menu_id'         => 'main-menu',
+//			'depth'           => 2,
+//			'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+//		)
+//	);
+	?>
 	<div class="header-image-default">
 
 	</div>

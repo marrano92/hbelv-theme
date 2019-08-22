@@ -90,7 +90,7 @@ gulp.task(
 // Minifies CSS files
 gulp.task('cssnano', function() {
 	return gulp
-		.src(paths.css + '/theme.css')
+		.src(paths.css + '/*.css')
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(
 			plumber({
@@ -108,7 +108,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('minifycss', function() {
 	return gulp
-		.src(`${paths.css}/theme.css`)
+		.src([`${paths.css}/*.css`,`!${paths.css}/*.min.css`])
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(cleanCSS({ compatibility: '*' }))
 		.pipe(
@@ -126,8 +126,7 @@ gulp.task('minifycss', function() {
 
 gulp.task('cleancss', function() {
 	return gulp
-		.src(`${paths.css}/*.min.css`, { read: false }) // Much faster
-		.pipe(ignore('theme.css'))
+		.src([`${paths.css}/*.css`, `${paths.css}/*.map`])
 		.pipe(rimraf());
 });
 

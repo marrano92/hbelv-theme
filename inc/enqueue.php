@@ -30,4 +30,19 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	}
 } // endif function_exists( 'understrap_scripts' ).
 
+if ( ! function_exists( 'hotelbelvedere_scripts' ) ) {
+	/**
+	 * Load theme's JavaScript and CSS sources.
+	 */
+	function hotelbelvedere_scripts() {
+		$the_theme     = wp_get_theme();
+		$theme_version = $the_theme->get( 'Version' );
+
+		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme-hotel.min.css' );
+		wp_enqueue_style( 'hotelbelvedere-styles', get_template_directory_uri() . '/css/theme-hotel.min.css', array(), $css_version );
+	}
+
+}
+
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+add_action( 'wp_enqueue_scripts', 'hotelbelvedere_scripts' );

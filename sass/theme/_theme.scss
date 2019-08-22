@@ -1,1 +1,17 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+.header-image-default{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 800px;
+	background-image: url("#{$path__images}/home/esterno.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+@include respond-to(small) {
+	.header-image-default{
+		height: 300px;
+	}
+}

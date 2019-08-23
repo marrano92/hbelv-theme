@@ -33,3 +33,9 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+$options = options_factory();
+
+if ($options->slide_home){
+	add_filter( "hbelv/has_slide_home", '' );
+}

@@ -76,6 +76,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 //		)
 //	);
 	?>
-	<div class="header-image-default">
 
-	</div>

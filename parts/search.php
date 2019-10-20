@@ -6,6 +6,7 @@
 
 $rooms = $hbelv->items;
 ?>
+<div class="container">
 <div class="content-search l-row">
 	<div class="card-deck">
 		<?php foreach ($rooms as $room){ ?>
@@ -21,4 +22,5 @@ $rooms = $hbelv->items;
 		</div>
 		<?php } ?>
 	</div>
+</div>
 </div>

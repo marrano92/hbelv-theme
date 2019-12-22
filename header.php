@@ -10,7 +10,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container               = get_theme_mod( 'understrap_container_type' );
+$query_monitor_is_active = in_array( 'query-monitor/query-monitor.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) );
+$change_menu             = is_user_logged_in() && $query_monitor_is_active;
+$menu_string_1           = $change_menu ? 'query-monitor-32' : '';
+$menu_string_2           = $change_menu ? 'query-monitor-91' : '';
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -23,57 +28,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
+<div class="site demo1" id="page">
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-		<ul id="gn-menu" class="gn-menu-main">
-			<li class="gn-trigger">
-				<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-				<nav class="gn-menu-wrapper">
-					<div class="gn-scroller">
-						<ul class="gn-menu">
-							<li class="gn-search-item">
-								<input placeholder="Search" type="search" class="gn-search">
-								<a class="gn-icon gn-icon-search"><span>Search</span></a>
-							</li>
-							<li>
-								<a class="gn-icon gn-icon-download">Downloads</a>
-								<ul class="gn-submenu">
-									<li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
-									<li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
-								</ul>
-							</li>
-							<li><a class="gn-icon gn-icon-cog">Settings</a></li>
-							<li><a class="gn-icon gn-icon-help">Help</a></li>
-							<li>
-								<a class="gn-icon gn-icon-archive">Archives</a>
-								<ul class="gn-submenu">
-									<li><a class="gn-icon gn-icon-article">Articles</a></li>
-									<li><a class="gn-icon gn-icon-pictures">Images</a></li>
-									<li><a class="gn-icon gn-icon-videos">Videos</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div><!-- /gn-scroller -->
-				</nav>
-			</li>
-			<li><a href="http://tympanus.net/codrops">Codrops</a></li>
-			<li><a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/HeaderEffects/"><span>Previous Demo</span></a></li>
-			<li><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16030"><span>Back to the Codrops Article</span></a></li>
+		<div id="burgerBtn"></div>
+		<ul id="nav">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
-	</div>
+		<div id="mobileBodyContent">
+			<div id="header"></div>
+			<div id="image">
+				<img src="https://s3-eu-west-1.amazonaws.com/ugly.cloud/2017/02/codepen-pure-css-mobile-nav-anim.jpg" alt="" />
+			</div>
+			<div id="title"></div>
+			<div id="text">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
 	<?php
-//	wp_nav_menu(
-//		array(
-//			'theme_location'  => 'primary',
-//			'container_class' => 'collapse navbar-collapse',
-//			'container_id'    => 'navbarNavDropdown',
-//			'menu_class'      => 'navbar-nav ml-auto',
-//			'fallback_cb'     => '',
-//			'menu_id'         => 'main-menu',
-//			'depth'           => 2,
-//			'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-//		)
-//	);
+	//	wp_nav_menu(
+	//		array(
+	//			'theme_location'  => 'primary',
+	//			'container_class' => 'collapse navbar-collapse',
+	//			'container_id'    => 'navbarNavDropdown',
+	//			'menu_class'      => 'navbar-nav ml-auto',
+	//			'fallback_cb'     => '',
+	//			'menu_id'         => 'main-menu',
+	//			'depth'           => 2,
+	//			'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+	//		)
+	//	);
 	?>
 

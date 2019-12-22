@@ -1,5 +1,4 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-//@import "theme";
 
 @mixin transition($params) {
 	-webkit-transition: $params;
@@ -71,6 +70,8 @@
 #header {
 	height:60px;
 	background:#eae8e5;
+	position: fixed;
+	width: 100%;
 }
 
 #image {
@@ -107,7 +108,7 @@
 	height:25px;
 	width:30px;
 	box-sizing:border-box;
-	position:absolute;
+	position: fixed;
 	z-index:30;
 	left:20px;
 	top:15px;

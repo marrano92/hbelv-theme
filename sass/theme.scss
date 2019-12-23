@@ -6,6 +6,8 @@
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/font-awesome";    // <-------- Font Awesome Icon font
 @import "assets/underscores";     // <-------- Underscores media styles
+@import "../node_modules/animate.css/animate.min.css";     // <-------- Underscores media styles
+@import "../node_modules/hover.css/scss/hover";
 
 // Any additional imported files //
 @import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
@@ -13,4 +15,4 @@
 
 //styles hotel
 @import "hotel/rooms";
-@import "menu/header";
+@import "header/top-bar";

@@ -4,22 +4,22 @@
 
 
 $primary: #cfbb58; // Thats a sample how you could change a BootStrap variable.
-$background: #fdfdfd;
+$background: #f9f9f9;
 $path__images: "/wp-content/themes/hotelilbelvedere/images";
-
+$font__family: "Muli, sans-serif";
 @mixin respond-to($breakpoint) {
 	@if $breakpoint == "small" {
 		@media (max-width: 767px) {
 			@content;
 		}
 	}
-	
+
 	@else if $breakpoint == "medium" {
 		@media (max-width: 992px) {
 			@content;
 		}
 	}
-	
+
 	@else if $breakpoint == "large" {
 		@media (max-width: 1200px) {
 			@content;

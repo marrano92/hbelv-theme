@@ -1,0 +1,28 @@
+.header-top-bar{
+	width: 100%;
+	position: fixed;
+	background: white;
+	border-bottom: 1px solid #e4e4e4;
+
+	a{
+		padding: 16px;
+		cursor: pointer;
+		text-decoration: none;
+		line-height: 13px;
+		color: #000;
+		border: 1px solid #000;
+		font-weight: 700;
+		text-rendering: optimizeLegibility;
+	}
+
+	.hvr-sweep-to-bottom:before{
+		background: #165672!important;
+
+	}
+}
+
+.height-top_bar{
+	height: 90px;
+}
+
+

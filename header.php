@@ -24,37 +24,15 @@ $menu_string_2           = $change_menu ? 'query-monitor-91' : '';
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes:400%7CCormorant:400%7CMuli:400,600,700&amp;subset=latin,latin,latin" media="all">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes:400%7CCormorant:400%7CMuli:400,600,700&subset=latin,latin,latin" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'wp_body_open' ); ?>
-<div class="site demo1" id="page">
-	<!-- ******************* The Navbar Area ******************* -->
-		<div id="burgerBtn"></div>
-		<ul id="nav">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-		<div id="mobileBodyContent">
-			<div id="header"></div>
-			<div id="image">
-				<img src="https://s3-eu-west-1.amazonaws.com/ugly.cloud/2017/02/codepen-pure-css-mobile-nav-anim.jpg" alt="" />
-			</div>
-			<div id="title"></div>
-			<div id="text">
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			</div>
-		</div>
+<?php
+do_action( 'wp_body_open' );
+
+ get_template_part('parts/header/top-bar'); ?>
 	<?php
 	//	wp_nav_menu(
 	//		array(
